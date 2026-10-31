@@ -244,7 +244,7 @@ class MainActivity : ComponentActivity() {
         Spacer(Modifier.height(8.dp))
         Text("SALPAKAN BATTLEFIELD", Modifier.fillMaxWidth(), color = GoldBright, fontSize = 9.sp, letterSpacing = 1.sp, textAlign = TextAlign.Center)
         LazyVerticalGrid(GridCells.Fixed(8), Modifier.fillMaxWidth().weight(1f).border(1.dp, GoldDim, RoundedCornerShape(4.dp)), userScrollEnabled = false) {
-            gridItems(72) { index ->
+            items(count = 72) { index ->
                 val row = index / 8; val col = index % 8
                 val blue = row in 0..2; val red = row in 6..8
                 val piece = (blue || red) && (row * 3 + col) % 5 != 0
